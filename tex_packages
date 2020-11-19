@@ -1,0 +1,8 @@
+texlive
+texlive-fonts-extra
+texlive-lang-european
+texlive-latex-extra
+texlive-science
+texlive-publishers
+latexmk
+cm-super	# for latex in matplotlib

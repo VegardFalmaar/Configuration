@@ -1,0 +1,23 @@
+if [ "$color_prompt" = yes ]; then
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ '
+else
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\W\$ '
+fi
+unset color_prompt force_color_prompt
+
+if [ -d /home/vegard/Dropbox/Vegard\ og\ Kamilla/.bash_functions ]; then
+    for file in /home/vegard/Dropbox/Vegard\ og\ Kamilla/.bash_functions/*; do
+        . "$file"
+    done
+fi
+
+if [ -f ~/Documents/Configuration/.bash_aliases ]; then
+    . ~/Documents/Configuration/.bash_aliases
+fi
+
+#if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+#    tmux attach -t default || tmux new -s default
+#fi
+
+export PATH=/home/vegard/Documents/scripts:$PATH
+cd /home/vegard/Documents
