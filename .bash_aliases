@@ -1,3 +1,4 @@
+alias config="cd ${HOME}/Documents/Configuration"
 alias snarveier="vim ${HOME}/Documents/Configuration/.bash_aliases && source ${HOME}/Documents/Configuration/.bash_aliases"
 alias vimconfig="vim ${HOME}/Documents/Configuration/.vimrc"
 alias tmuxconfig="vim ${HOME}/Documents/Configuration/.tmux.conf"

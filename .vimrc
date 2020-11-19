@@ -175,15 +175,15 @@ autocmd Filetype    text
 " ===== [ Snippets ] ================
 " Python
 autocmd Filetype    python
- \ nnoremap <buffer> ,d :read $HOME/.vim/skeleton/docstring.py<CR>=7j7j<l8kf(lyi(4j$xxx"0p |
- \ nnoremap <buffer> ,f :read $HOME/.vim/skeleton/for.py<CR>=l$2hi|
- \ nnoremap <buffer> ,i :-1read $HOME/.vim/skeleton/import.py<CR>=jj|
- \ nnoremap <buffer> ,c :-1read $HOME/.vim/skeleton/continue.py<CR>=l
+ \ nnoremap <buffer> ,d :read $HOME/Documents/Configuration/.vim/skeleton/docstring.py<CR>=7j7j<l8kf(lyi(4j$xxx"0p |
+ \ nnoremap <buffer> ,f :read $HOME/Documents/Configuration/.vim/skeleton/for.py<CR>=l$2hi|
+ \ nnoremap <buffer> ,i :-1read $HOME/Documents/Configuration/.vim/skeleton/import.py<CR>=jj|
+ \ nnoremap <buffer> ,c :-1read $HOME/Documents/Configuration/.vim/skeleton/continue.py<CR>=l
 
 " C++
 autocmd Filetype    cpp
- \ nnoremap <buffer> ,f :read $HOME/.vim/skeleton/for.cpp<CR>=j^f<a|
- \ nnoremap <buffer> ,i :read $HOME/.vim/skeleton/include.cpp<CR>=l$i
+ \ nnoremap <buffer> ,f :read $HOME/Documents/Configuration/.vim/skeleton/for.cpp<CR>=j^f<a|
+ \ nnoremap <buffer> ,i :read $HOME/Documents/Configuration/.vim/skeleton/include.cpp<CR>=l$i
 
 
 
