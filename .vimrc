@@ -4,7 +4,8 @@ syntax on           " of course
 set noerrorbells    " turn off crash sound on the bottom
 set number          " line numbers
 set wildmenu        " display all matching files when tab completed
-set path+=**        " Search down into subfolders
+set path+=**        " search down into subfolders
+set pastetoggle=<F3> " toggle between paste and nopaste mode
 
 
 
@@ -17,26 +18,27 @@ let mapleader = " "
 set expandtab       " tabs are spaces
 set smartindent     " indent for me
 set autoindent      " indentation of the next line should be the same as this
-set tabstop=4       " Tab indentation levels every four columns
+set tabstop=4       " tab indentation levels every four columns
 set softtabstop=4
 set shiftwidth=4
 
-" Do not remove indentation for comments
+" do not remove indentation for comments
 set cindent cinkeys-=0#
 
 
 
 " ===== [ Basic movement and commands ] ================
-" Exit insert mode
+" exit insert mode
 inoremap jh <Esc>
 
-" Y yanks to the end of the line instead of whole line
+" capital Y yanks to the end of the line instead of whole line
 nnoremap Y y$
 
 " make } move to the next blank space, but the cursor in the middle of the
 " screen
 nnoremap { {zz
 nnoremap } }zz
+
 
 
 " ===== [ Search and replace ] ================
@@ -46,7 +48,7 @@ set incsearch
 set hlsearch
 nnoremap <silent> <CR> :nohlsearch<CR><CR>
 
-" Shortcut for :%s/<CURSOR_HERE>/g
+" shortcut for :%s/<CURSOR_HERE>/g
 nnoremap <leader>s :%s//g<LEFT><LEFT>
 
 " remove trailing whitespace (substitute with nothing)
@@ -80,10 +82,10 @@ set foldmethod=indent
 set encoding=utf-8
 set background=dark
 
-" Disable bold font
+" disable bold font
 set t_md=
 
-" Colors
+" colors
 highlight Repeat ctermfg=216
 highlight Boolean ctermfg=216
 highlight Conditional ctermfg=216
@@ -94,9 +96,9 @@ highlight Define ctermfg=216
 highlight LineNr ctermfg=grey
 highlight Number ctermfg=119
 highlight Float ctermfg=119
-highlight Include ctermfg=215   " Highlight import
+highlight Include ctermfg=215   " highlight import
 
-" Enable folding with the spacebar
+" enable folding with the spacebar
 nnoremap <leader><space> za
 
 
@@ -111,7 +113,7 @@ autocmd WinEnter * silent! call matchadd('ColorColumn', '\%81v', 100)
 " from Damian Conway
 " call matchadd('InvisibleSpaces', '\S\@<=\s\+\%#\ze\s*$')
 
-" My own
+" my own
 " call matchadd('InvisibleSpaces', '\s\+$')   " match trailing whitespace
 " call matchadd('InvisibleSpaces', '\t')      " match tab character
 
@@ -130,27 +132,54 @@ let g:netrw_altv=1          " open splits to the right
 let g:netrw_liststyle=3     " tree view
 
 
+
 " ===== [ Comments ] ================
-" leader cc to comment line
-" leader cf convert #Hello to # hello (space)
-"       and  # Hello to # hello (lowercase)
+" default comment identifier
+let b:CommentIdentifier = "#"
+
 " Python
 autocmd Filetype    python,sh,conf
-    \   nnoremap <buffer> <silent> <leader>cc @='I#<space><C-o>j<C-o>'<CR><Esc><Esc> |
+    \   let b:CommentIdentifier = "#" |
     \   nnoremap <buffer> <leader>cf :%s/\v# ([A-Z])\|#([a-zA-Z0-9])/# \L\1\2\e/gc<CR>
 " C++
 autocmd Filetype    cpp
-    \   nnoremap <buffer> <silent> <leader>cc @='I//<space><C-o>j<C-o>'<CR><Esc><Esc> |
+    \   let b:CommentIdentifier = "//" |
     \   nnoremap <buffer> <leader>cf :%s/\v\/\/ ([A-Z])\|\/\/([a-zA-Z0-9])/\/\/ \L\1\2\e/gc<CR>
 " vim
 autocmd Filetype    vim
-    \   nnoremap <buffer> <silent> <leader>cc @='I"<space><C-o>j<C-o>'<CR><Esc><Esc> |
+    \   let b:CommentIdentifier = '"' |
     \   nnoremap <buffer> <leader>cf :%s/\v" ([A-Z])\|"([a-zA-Z0-9])/" \L\1\2\e/gc<CR>
 
-" Remove comments
-nnoremap <silent> <leader>cu @='^dawj'<CR>
+function! InsertComment(NumberOfLines)
+    let Comment = b:CommentIdentifier . ' '
+    " set a mark where the cursor is currently located
+    normal! mm
+    " insert the comment identifier followed by a whitespace on the desired
+    " number of lines
+    for i in range(1, a:NumberOfLines)
+        execute "normal! I" . Comment . "\<Esc>"
+        normal! j
+    endfor
+    " return to mark
+    normal! `m
+endfunction
 
-" Do not make the new line after a comment also a comment
+function! RemoveComment(NumberOfLines)
+    normal! mm
+    for i in range(1, a:NumberOfLines)
+        normal! ^dawj
+    endfor
+    normal! `m
+endfunction
+
+nnoremap <silent> <leader>cc :call InsertComment(1)<CR>
+nnoremap <silent> <leader>cu :call RemoveComment(1)<CR>
+for NumLines in range(2, 9)
+    execute 'nnoremap <silent> ' . NumLines . '<leader>cc :call InsertComment(' . NumLines . ')<CR>'
+    execute 'nnoremap <silent> ' . NumLines . '<leader>cu :call RemoveComment(' . NumLines . ')<CR>'
+endfor
+
+" do not make the new line after a comment also a comment
 set formatoptions-=o | set formatoptions-=r
 
 
@@ -159,14 +188,14 @@ set formatoptions-=o | set formatoptions-=r
 " use the popup menu for completion also when there is only one match
 set completeopt=menuone
 
-"" These do not work
-" set wildignorecase  " Case-insensitive completions
-" set infercase       " Adjust completions to match case
+"" these do not work
+" set wildignorecase  " case-insensitive completions
+" set infercase       " adjust completions to match case
 
 
 
 " ===== [ Visual ] ================
-"" For text files
+" for text files
 autocmd Filetype    text
     \   setlocal textwidth=79
 
@@ -175,7 +204,7 @@ autocmd Filetype    text
 " ===== [ Snippets ] ================
 " Python
 autocmd Filetype    python
- \ nnoremap <buffer> ,d :read $HOME/Documents/Configuration/.vim/skeleton/docstring.py<CR>=7j7j<l8kf(lyi(4j$xxx"0p |
+ \ nnoremap <buffer> ,d :read $HOME/Documents/Configuration/.vim/skeleton/docstring.py<CR>=7j7j<l8kf(lyi(4j$xxx" 0p |
  \ nnoremap <buffer> ,f :read $HOME/Documents/Configuration/.vim/skeleton/for.py<CR>=l$2hi|
  \ nnoremap <buffer> ,i :-1read $HOME/Documents/Configuration/.vim/skeleton/import.py<CR>=jj|
  \ nnoremap <buffer> ,c :-1read $HOME/Documents/Configuration/.vim/skeleton/continue.py<CR>=l
@@ -204,5 +233,5 @@ let g:ycm_filetype_whitelist = {
             \ }
 
 
-" Make /g the default on :s/.../../ commands (use /gg to disable)
+" make /g the default on :s/.../../ commands (use /gg to disable)
 " set gdefault  " doesn't work
