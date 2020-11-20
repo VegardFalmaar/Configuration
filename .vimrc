@@ -72,9 +72,10 @@ nnoremap <C-H> <C-W><C-H>
 
 
 " ===== [ Enable folding ] ================
+" fold with the spacebar
+nnoremap <leader><space> za
 set foldmethod=indent
 set foldlevel=99
-set foldmethod=indent
 
 
 
@@ -98,8 +99,9 @@ highlight Number ctermfg=119
 highlight Float ctermfg=119
 highlight Include ctermfg=215   " highlight import
 
-" enable folding with the spacebar
-nnoremap <leader><space> za
+" for text files
+autocmd Filetype    text
+    \   setlocal textwidth=79
 
 
 
@@ -191,13 +193,6 @@ set completeopt=menuone
 "" these do not work
 " set wildignorecase  " case-insensitive completions
 " set infercase       " adjust completions to match case
-
-
-
-" ===== [ Visual ] ================
-" for text files
-autocmd Filetype    text
-    \   setlocal textwidth=79
 
 
 
