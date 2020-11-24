@@ -7,7 +7,7 @@ alias editgitstatus="vim /home/vegard/Documents/scripts/gitstatus && source /hom
 alias compphys="cd /home/vegard/Documents/FYS3150/Project3"
 alias kvante="cd /home/vegard/Dropbox/Skole/Studier/UiO/5.semester/FYS3110"
 alias termo="cd /home/vegard/Dropbox/Skole/Studier/UiO/5.semester/FYS2160/Oblig\ 1"
-alias highlevel="cd /home/vegard/Documents/IN3110-vegardfa/assignment5"
+alias highlevel="cd /home/vegard/Documents/IN3110-vegardfa/assignment6"
 alias highlevelpr="cd /home/vegard/Documents/IN3110-oyvinsom/assignment5"
 
 alias code="cd /home/vegard/Documents/interesting_code"

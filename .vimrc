@@ -197,15 +197,38 @@ set completeopt=menuone
 
 
 " ===== [ Snippets ] ================
+function! PythonDocstringSnippet()
+    " insert snippet
+    execute 'read $HOME/Documents/Configuration/.vim/skeleton/docstring.py'
+    " fix indentation
+    normal! =7j7j<l
+    " paste arguments in args list
+    normal! 8kf(lyi(4j$xxx"0p
+    " replace commas with newlines
+    execute '.s/, /\r/g'
+endfunction
+
+function! CppDocstringSnippet(NumArgs)
+    " insert snippet
+    execute 'read $HOME/Documents/Configuration/.vim/skeleton/docstring.cpp'
+    " fix indentation
+    normal! V7j>7j<l
+    " paste arguments in args list
+    normal! %2kf)yi(}2j$xxx"0p
+    " replace commas with newlines
+    " execute '.,+' . a:NumArgs . 's/, /\r/g'
+endfunction
+
 " Python
 autocmd Filetype    python
- \ nnoremap <buffer> ,d :read $HOME/Documents/Configuration/.vim/skeleton/docstring.py<CR>=7j7j<l8kf(lyi(4j$xxx" 0p |
+ \ nnoremap <buffer> ,d :call PythonDocstringSnippet()<CR> |
  \ nnoremap <buffer> ,f :read $HOME/Documents/Configuration/.vim/skeleton/for.py<CR>=l$2hi|
  \ nnoremap <buffer> ,i :-1read $HOME/Documents/Configuration/.vim/skeleton/import.py<CR>=jj|
  \ nnoremap <buffer> ,c :-1read $HOME/Documents/Configuration/.vim/skeleton/continue.py<CR>=l
 
 " C++
 autocmd Filetype    cpp
+ \ nnoremap <buffer> ,d :call CppDocstringSnippet()<LEFT> |
  \ nnoremap <buffer> ,f :read $HOME/Documents/Configuration/.vim/skeleton/for.cpp<CR>=j^f<a|
  \ nnoremap <buffer> ,i :read $HOME/Documents/Configuration/.vim/skeleton/include.cpp<CR>=l$i
 
