@@ -129,9 +129,10 @@ set list
 nnoremap <leader>o :edit .<CR>
 " nnoremap <leader>O :vsplit<CR> :vertical resize 35<CR> :edit .<CR>
 nnoremap <leader>O :below split<CR> :edit .<CR>
-let g:netrw_banner=0        " disable banner
-let g:netrw_altv=1          " open splits to the right
-let g:netrw_liststyle=3     " tree view
+let g:netrw_banner=0            " disable banner
+let g:netrw_altv=1              " open splits to the right
+let g:netrw_liststyle=3         " tree view
+let g:netrw_sort_options = "i"  " sort alphabetically case insensitively
 
 
 
