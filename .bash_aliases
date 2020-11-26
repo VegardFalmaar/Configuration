@@ -4,7 +4,7 @@ alias vimconfig="vim ${HOME}/Documents/Configuration/.vimrc"
 alias tmuxconfig="vim ${HOME}/Documents/Configuration/.tmux.conf"
 alias editgitstatus="vim /home/vegard/Documents/scripts/gitstatus && source /home/vegard/Documents/scripts/gitstatus"
 
-alias compphys="cd /home/vegard/Documents/FYS3150/Project3"
+alias compphys="cd /home/vegard/Documents/FYS3150/Project4"
 alias kvante="cd /home/vegard/Dropbox/Skole/Studier/UiO/5.semester/FYS3110"
 alias termo="cd /home/vegard/Dropbox/Skole/Studier/UiO/5.semester/FYS2160/Oblig\ 1"
 alias highlevel="cd /home/vegard/Documents/IN3110-vegardfa/assignment6"
