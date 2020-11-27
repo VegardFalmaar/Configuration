@@ -16,6 +16,7 @@ alias notes="cd /home/vegard/Documents/notes/_code"
 alias sudoku="cd /home/vegard/Documents/sudoku_solver"
 alias scalc="cd /home/vegard/Documents/symcalc"
 alias ntgprog="cd /home/vegard/Dropbox/Skole/NTG/Vikar/Programmering"
+alias webdev="cd /home/vegard/Documents/personal_website"
 
 alias matlab='/usr/local/bin/matlab -desktop' #'LD_PRELOAD=/usr/loib/x86_64-linux-gnu/libstdc++.so.6.0.22 /usr/local/bin/matlab -desktop'
 alias ovito="~/Downloads/ovito-basic-3.2.1-x86_64/bin/ovito"
