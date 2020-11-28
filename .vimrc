@@ -21,6 +21,10 @@ set autoindent      " indentation of the next line should be the same as this
 set tabstop=4       " tab indentation levels every four columns
 set softtabstop=4
 set shiftwidth=4
+autocmd Filetype    html
+  \ setlocal tabstop=2 |
+  \ setlocal softtabstop=2 |
+  \ setlocal shiftwidth=2
 
 " do not remove indentation for comments
 set cindent cinkeys-=0#
@@ -220,6 +224,11 @@ function! CppDocstringSnippet(NumArgs)
     " execute '.,+' . a:NumArgs . 's/, /\r/g'
 endfunction
 
+function! HTMLTag(content)
+    execute 'normal! o<' . a:content . '></>'
+    normal! 2F<lyiw2f>hpF<
+endfunction
+
 " Python
 autocmd Filetype    python
  \ nnoremap <buffer> ,d :call PythonDocstringSnippet()<CR> |
@@ -229,9 +238,13 @@ autocmd Filetype    python
 
 " C++
 autocmd Filetype    cpp
- \ nnoremap <buffer> ,d :call CppDocstringSnippet()<LEFT> |
+ \ nnoremap <buffer> ,d :call CppDocstringSnippet()<LEFT>|
  \ nnoremap <buffer> ,f :read $HOME/Documents/Configuration/.vim/skeleton/for.cpp<CR>=j^f<a|
  \ nnoremap <buffer> ,i :read $HOME/Documents/Configuration/.vim/skeleton/include.cpp<CR>=l$i
+
+" html
+autocmd Filetype    html
+  \ nnoremap <buffer> ,t :call HTMLTag()<LEFT>''<LEFT>
 
 
 
