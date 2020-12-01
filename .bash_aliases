@@ -8,7 +8,7 @@ alias compphys="cd /home/vegard/Documents/FYS3150/Project4"
 alias kvante="cd /home/vegard/Dropbox/Skole/Studier/UiO/5.semester/FYS3110"
 alias termo="cd /home/vegard/Dropbox/Skole/Studier/UiO/5.semester/FYS2160/Oblig\ 1"
 alias highlevel="cd /home/vegard/Documents/IN3110-vegardfa/assignment6"
-alias highlevelpr="cd /home/vegard/Documents/IN3110-oyvinsom/assignment5"
+alias highlevelpr="cd /home/vegard/Documents/IN3110-haakhern/assignment6/"
 
 alias code="cd /home/vegard/Documents/interesting_code"
 alias scripts="cd /home/vegard/Documents/scripts"
