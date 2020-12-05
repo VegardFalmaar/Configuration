@@ -6,6 +6,8 @@ set number          " line numbers
 set wildmenu        " display all matching files when tab completed
 set path+=**        " search down into subfolders
 set pastetoggle=<F3> " toggle between paste and nopaste mode
+" put all swap files in the same place
+set directory^=$HOME/.vim/swap//
 
 
 
@@ -104,7 +106,7 @@ highlight Float ctermfg=119
 highlight Include ctermfg=215   " highlight import
 
 " for text files
-autocmd Filetype    text
+autocmd Filetype    text, markdown
     \   setlocal textwidth=79
 
 
@@ -114,14 +116,6 @@ autocmd Filetype    text
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 " only highlight when I'm going over the 80 char line
 autocmd WinEnter * silent! call matchadd('ColorColumn', '\%81v', 100)
-
-" highlight InvisibleSpaces ctermfg=Black ctermbg=Black
-" from Damian Conway
-" call matchadd('InvisibleSpaces', '\S\@<=\s\+\%#\ze\s*$')
-
-" my own
-" call matchadd('InvisibleSpaces', '\s\+$')   " match trailing whitespace
-" call matchadd('InvisibleSpaces', '\t')      " match tab character
 
 " I imagine this is more efficient as it is built in
 exec "set listchars=tab:\uBB\uBB,trail:\uB7,nbsp:~"
