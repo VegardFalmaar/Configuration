@@ -8,6 +8,13 @@ set path+=**        " search down into subfolders
 set pastetoggle=<F3> " toggle between paste and nopaste mode
 " put all swap files in the same place
 set directory^=$HOME/.vim/swap//
+" because I am stupid and write :W instead of :w
+command! WQ wq
+command! Wq wq
+command! W w
+command! Q q
+" save
+nmap <Leader>w :w<CR>
 
 
 
@@ -58,7 +65,7 @@ nnoremap <silent> <CR> :nohlsearch<CR><CR>
 nnoremap <leader>s :%s//g<LEFT><LEFT>
 
 " remove trailing whitespace (substitute with nothing)
-nnoremap <silent> <leader>w :%s/\s\+$//g<CR>
+nnoremap <silent> <leader>fw :%s/\s\+$//g<CR>
 
 
 
