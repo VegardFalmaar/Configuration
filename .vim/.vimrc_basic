@@ -113,7 +113,7 @@ highlight Float ctermfg=119
 highlight Include ctermfg=215   " highlight import
 
 " for text files
-autocmd Filetype    text, markdown
+autocmd Filetype    text,markdown
     \   setlocal textwidth=79
 
 
@@ -196,74 +196,12 @@ set formatoptions-=o | set formatoptions-=r
 " use the popup menu for completion also when there is only one match
 set completeopt=menuone
 
-"" these do not work
+
+
+
+" ===== [ These do not work ] ================
 " set wildignorecase  " case-insensitive completions
 " set infercase       " adjust completions to match case
-
-
-
-" ===== [ Snippets ] ================
-function! PythonDocstringSnippet()
-    " insert snippet
-    execute 'read $HOME/Documents/Configuration/.vim/skeleton/docstring.py'
-    " fix indentation
-    normal! =7j7j<l
-    " paste arguments in args list
-    normal! 8kf(lyi(4j$xxx"0p
-    " replace commas with newlines
-    execute '.s/, /\r/g'
-endfunction
-
-function! CppDocstringSnippet(NumArgs)
-    " insert snippet
-    execute 'read $HOME/Documents/Configuration/.vim/skeleton/docstring.cpp'
-    " fix indentation
-    normal! V7j>7j<l
-    " paste arguments in args list
-    normal! %2kf)yi(}2j$xxx"0p
-    " replace commas with newlines
-    " execute '.,+' . a:NumArgs . 's/, /\r/g'
-endfunction
-
-function! HTMLTag(content)
-    execute 'normal! o<' . a:content . '></>'
-    normal! 2F<lyiw2f>hpF<
-endfunction
-
-" Python
-autocmd Filetype    python
- \ nnoremap <buffer> ,d :call PythonDocstringSnippet()<CR> |
- \ nnoremap <buffer> ,f :read $HOME/Documents/Configuration/.vim/skeleton/for.py<CR>=l$2hi|
- \ nnoremap <buffer> ,i :-1read $HOME/Documents/Configuration/.vim/skeleton/import.py<CR>=jj|
- \ nnoremap <buffer> ,c :-1read $HOME/Documents/Configuration/.vim/skeleton/continue.py<CR>=l
-
-" C++
-autocmd Filetype    cpp
- \ nnoremap <buffer> ,d :call CppDocstringSnippet()<LEFT>|
- \ nnoremap <buffer> ,f :read $HOME/Documents/Configuration/.vim/skeleton/for.cpp<CR>=j^f<a|
- \ nnoremap <buffer> ,i :read $HOME/Documents/Configuration/.vim/skeleton/include.cpp<CR>=l$i
-
-" html
-autocmd Filetype    html
-  \ nnoremap <buffer> ,t :call HTMLTag()<LEFT>''<LEFT>
-
-
-
-" ===== [ Plugins ] ================
-call plug#begin('~/.vim/plugged')
-" Plug 'git@github.com:Valloric/YouCompleteMe.git'
-Plug 'https://tpope.io/vim/surround.git'
-call plug#end()
-
-" Youcompleteme fixes
-let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
-let g:ycm_autoclose_preview_window_after_completion=1
-nnoremap <silent> <leader>gd :YcmCompleter GoTo<CR>
-nnoremap <silent> <leader>gf :YcmCompleter FixIt<CR>
-let g:ycm_filetype_whitelist = {
-            \ "c":1,
-            \ "cpp":1,
-            \ }
 
 
 " make /g the default on :s/.../../ commands (use /gg to disable)

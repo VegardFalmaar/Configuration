@@ -1,0 +1,4 @@
+" ===== [ Plugins ] ================
+call plug#begin('~/.vim/plugged')
+Plug 'https://tpope.io/vim/surround.git'
+call plug#end()

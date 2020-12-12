@@ -1,6 +1,6 @@
 alias config="cd ${HOME}/Documents/Configuration"
 alias snarveier="vim ${HOME}/Documents/Configuration/.bash_aliases && source ${HOME}/Documents/Configuration/.bash_aliases"
-alias vimconfig="vim ${HOME}/Documents/Configuration/.vimrc"
+alias vimconfig="cd ${HOME}/Documents/Configuration/.vim"
 alias tmuxconfig="vim ${HOME}/Documents/Configuration/.tmux.conf"
 alias editgitstatus="vim /home/vegard/Documents/scripts/gitstatus && source /home/vegard/Documents/scripts/gitstatus"
 
