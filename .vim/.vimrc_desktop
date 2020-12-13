@@ -1,4 +1,5 @@
 " ===== [ Plugins ] ================
 call plug#begin('~/.vim/plugged')
 Plug 'https://tpope.io/vim/surround.git'
+Plug 'https://github.com/christoomey/vim-tmux-navigator'
 call plug#end()
