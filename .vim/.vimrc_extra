@@ -1,13 +1,21 @@
 " ===== [ Snippets ] ================
-function! PythonDocstringSnippet()
+function! PythonDocstringSnippet(NumberOfArgs)
     " insert snippet
     execute 'read $HOME/Documents/Configuration/.vim/skeleton/docstring.py'
     " fix indentation
     normal! =7j7j<l
     " paste arguments in args list
-    normal! 8kf(lyi(4j$xxx"0p
+    normal! 8k^f(yi(4j$p^3x
     " replace commas with newlines
-    execute '.s/, /\r/g'
+    for i in range(1, a:NumberOfArgs-1)
+        normal! f,dwi (type): description
+    endfor
+    normal! A (type): description
+    " delete extra newline
+    normal! dd
+    " move to type of first argument
+    execute 'normal! ' . a:NumberOfArgs . 'k'
+    normal! f(
 endfunction
 
 function! CppDocstringSnippet(NumArgs)
@@ -21,6 +29,19 @@ function! CppDocstringSnippet(NumArgs)
     " execute '.,+' . a:NumArgs . 's/, /\r/g'
 endfunction
 
+function! PythonInsertForLoop(Counter, End)
+    execute 'normal! ofor ' . a:Counter . ' in range(len(' . a:End . ')):'
+    normal! k
+endfunction
+
+function! CppInsertForLoop(Counter, StartValue, EndValue)
+    execute 'normal! ofor (int ' . a:Counter . ' = ' . a:StartValue
+    execute 'normal! A; ' . a:Counter . ' <= ' . a:EndValue
+    execute 'normal! A; ' . a:Counter . '++) {}'
+    normal! k
+endfunction
+
+
 function! HTMLTag(content)
     execute 'normal! o<' . a:content . '></>'
     normal! 2F<lyiw2f>hpF<
@@ -28,16 +49,17 @@ endfunction
 
 " Python
 autocmd Filetype    python
- \ nnoremap <buffer> ,d :call PythonDocstringSnippet()<CR> |
- \ nnoremap <buffer> ,f :read $HOME/Documents/Configuration/.vim/skeleton/for.py<CR>=l$2hi|
+ \ nnoremap <buffer> ,d :call PythonDocstringSnippet()<LEFT>|
+ \ nnoremap <buffer> ,f :call PythonInsertForLoop()<LEFT>'|
  \ nnoremap <buffer> ,i :-1read $HOME/Documents/Configuration/.vim/skeleton/import.py<CR>=jj|
- \ nnoremap <buffer> ,c :-1read $HOME/Documents/Configuration/.vim/skeleton/continue.py<CR>=l
+ \ nnoremap <buffer> ,c oinput('Continue?')
 
 " C++
 autocmd Filetype    cpp
  \ nnoremap <buffer> ,d :call CppDocstringSnippet()<LEFT>|
- \ nnoremap <buffer> ,f :read $HOME/Documents/Configuration/.vim/skeleton/for.cpp<CR>=j^f<a|
- \ nnoremap <buffer> ,i :read $HOME/Documents/Configuration/.vim/skeleton/include.cpp<CR>=l$i
+ \ nnoremap <buffer> ,f :call CppInsertForLoop()<LEFT>'|
+ \ nnoremap <buffer> ,i1 o#include <>i|
+ \ nnoremap <buffer> ,i2 o#include ""i
 
 " html
 autocmd Filetype    html
