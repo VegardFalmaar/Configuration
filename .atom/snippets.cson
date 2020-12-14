@@ -46,17 +46,11 @@
   'label':
     'prefix': 'label'
     'body': '\\\\label{$1}$0'
-# numberthis
-  '\\numberthis':
-    'prefix': '\\numberthis'
-    'body': '\\\\numberthis \\\\label{$1}$0'
-  'numberthis':
-    'prefix': 'numberthis'
-    'body': '\\\\numberthis \\\\label{$1}$0'
 
 
 # math
 '.text.tex.latex .string.other.math':
+# derivatives
   '\\ddpart':
     'prefix': '\\ddpart'
     'body': '\\\\ddpart{$1}{$2}$0'
@@ -69,3 +63,32 @@
   'ddtot':
     'prefix': 'ddtot'
     'body': '\\\\ddtot{$1}{$2}$0'
+# second order derivatives
+  '\\ddpartsq':
+    'prefix': '\\ddpartsq'
+    'body': '\\\\ddpartsq{$1}{$2}$0'
+  'ddpartsq':
+    'prefix': 'ddpartsq'
+    'body': '\\\\ddpartsq{$1}{$2}$0'
+  '\\ddtotsq':
+    'prefix': '\\ddtotsq'
+    'body': '\\\\ddtotsq{$1}{$2}$0'
+  'ddtotsq':
+    'prefix': 'ddtotsq'
+    'body': '\\\\ddtotsq{$1}{$2}$0'
+
+# numberthis
+  '\\numberthis':
+    'prefix': '\\numberthis'
+    'body': '\\\\numberthis \\\\label{$1}$0'
+  'numberthis':
+    'prefix': 'numberthis'
+    'body': '\\\\numberthis \\\\label{$1}$0'
+# quad
+  'quad':
+    'prefix': 'quad'
+    'body': '\\\\quad'
+# Rightarrow
+  'Rightarrow':
+    'prefix': 'rightarrow'
+    'body': '\\\\Rightarrow'
