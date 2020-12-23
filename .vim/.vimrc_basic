@@ -104,6 +104,9 @@ set t_md=
 " for text files
 autocmd Filetype    text,markdown
     \   setlocal textwidth=79
+" for git commits
+autocmd Filetype    gitcommit
+    \   setlocal textwidth=72
 
 
 
