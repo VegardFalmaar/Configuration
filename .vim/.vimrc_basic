@@ -1,3 +1,7 @@
+" ===== [ Mapleader ] ================
+let mapleader = " "
+
+
 
 " ===== [ General ] ================
 syntax on           " of course
@@ -6,6 +10,7 @@ set number          " line numbers
 set wildmenu        " display all matching files when tab completed
 set path+=**        " search down into subfolders
 set pastetoggle=<F3> " toggle between paste and nopaste mode
+set laststatus=0    " do not display last status
 " put all swap files in the same place
 set directory^=$HOME/.vim/swap//
 " because I am stupid and write :W instead of :w
@@ -15,11 +20,10 @@ command! W w
 command! Q q
 " save
 nmap <Leader>w :w<CR>
-
-
-
-" ===== [ Mapleader ] ================
-let mapleader = " "
+" run the macro in q register
+nnoremap Q @q
+" new tab
+nnoremap <c-t> :tabnew<cr>
 
 
 
@@ -30,7 +34,7 @@ set autoindent      " indentation of the next line should be the same as this
 set tabstop=4       " tab indentation levels every four columns
 set softtabstop=4
 set shiftwidth=4
-autocmd Filetype    html
+autocmd Filetype    html,cpp
   \ setlocal tabstop=2 |
   \ setlocal softtabstop=2 |
   \ setlocal shiftwidth=2
@@ -70,8 +74,6 @@ nnoremap <silent> <leader>fw :%s/\s\+$//g<CR>
 
 
 " ===== [ Relative numbers ] ================
-" autocmd InsertEnter * :set relativenumber
-" autocmd InsertLeave * :set norelativenumber
 set relativenumber
 
 
@@ -195,6 +197,21 @@ set formatoptions-=o | set formatoptions-=r
 " ===== [ Autocompletion ] ================
 " use the popup menu for completion also when there is only one match
 set completeopt=menuone
+
+" tab completion
+" will insert tab at beginning of line,
+" will use completion if not at beginning
+set wildmode=list:longest,list:full
+function! InsertTabWrapper()
+    let col = col('.') - 1
+    if !col || getline('.')[col - 1] !~ '\k'
+        return "\<tab>"
+    else
+        return "\<c-p>"
+    endif
+endfunction
+inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
+inoremap <S-Tab> <c-n>
 
 
 
