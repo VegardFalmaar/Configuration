@@ -101,19 +101,6 @@ set background=dark
 " disable bold font
 set t_md=
 
-" colors
-highlight Repeat ctermfg=216
-highlight Boolean ctermfg=216
-highlight Conditional ctermfg=216
-highlight Label ctermfg=216
-highlight Keyword ctermfg=216
-highlight Exception ctermfg=216
-highlight Define ctermfg=216
-highlight LineNr ctermfg=grey
-highlight Number ctermfg=119
-highlight Float ctermfg=119
-highlight Include ctermfg=215   " highlight import
-
 " for text files
 autocmd Filetype    text,markdown
     \   setlocal textwidth=79

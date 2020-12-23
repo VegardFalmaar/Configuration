@@ -3,6 +3,7 @@ call plug#begin('~/.vim/plugged')
 " Plug 'git@github.com:Valloric/YouCompleteMe.git'
 Plug 'https://github.com/christoomey/vim-tmux-navigator'
 Plug 'https://tpope.io/vim/surround.git'
+Plug 'https://github.com/nanotech/jellybeans.vim'
 call plug#end()
 
 " Youcompleteme fixes
@@ -15,3 +16,8 @@ let g:ycm_filetype_whitelist = {
             \ "cpp":1,
             \ }
 
+" jellybeans configuration
+colorscheme jellybeans
+let g:jellybeans_overrides = {
+\    'background': { 'guibg': '062E40' },
+\}
