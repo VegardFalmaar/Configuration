@@ -18,6 +18,3 @@ let g:ycm_filetype_whitelist = {
 
 " jellybeans configuration
 colorscheme jellybeans
-let g:jellybeans_overrides = {
-\    'background': { 'guibg': '062E40' },
-\}

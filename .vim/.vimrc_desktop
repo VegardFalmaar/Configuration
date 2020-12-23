@@ -7,6 +7,3 @@ call plug#end()
 
 " jellybeans configuration
 colorscheme jellybeans
-let g:jellybeans_overrides = {
-\    'background': { 'guibg': '062E40' },
-\}
