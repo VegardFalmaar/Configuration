@@ -4,6 +4,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'https://github.com/christoomey/vim-tmux-navigator'
 Plug 'https://tpope.io/vim/surround.git'
 Plug 'https://github.com/nanotech/jellybeans.vim'
+Plug 'https://github.com/tpope/vim-repeat'
+Plug 'https://github.com/vim-scripts/ReplaceWithRegister'
 call plug#end()
 
 " Youcompleteme fixes
