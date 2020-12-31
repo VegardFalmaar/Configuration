@@ -202,14 +202,3 @@ function! InsertTabWrapper()
 endfunction
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <S-Tab> <c-n>
-
-
-
-
-" ===== [ These do not work ] ================
-" set wildignorecase  " case-insensitive completions
-" set infercase       " adjust completions to match case
-
-
-" make /g the default on :s/.../../ commands (use /gg to disable)
-" set gdefault  " doesn't work

@@ -6,6 +6,7 @@ Plug 'https://tpope.io/vim/surround.git'
 Plug 'https://github.com/nanotech/jellybeans.vim'
 Plug 'https://github.com/tpope/vim-repeat'
 Plug 'https://github.com/vim-scripts/ReplaceWithRegister'
+Plug 'https://github.com/christoomey/vim-system-copy'
 call plug#end()
 
 " Youcompleteme fixes
@@ -20,3 +21,11 @@ let g:ycm_filetype_whitelist = {
 
 " jellybeans configuration
 colorscheme jellybeans
+
+
+
+" ===== [ Copy to system clipboard (requires xsel) ] ================
+autocmd Filetype    python
+ \ nmap <leader>ca gg2jV/\nif __name__ == '__main__':<cr>cp<cr>
+autocmd Filetype    cpp
+ \ nmap <leader>ca gg2jV/\n\nint main(<cr>cp<cr>
