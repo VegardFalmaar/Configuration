@@ -1,7 +1,5 @@
 alias config="cd ~/Documents/Configuration"
 alias snarveier="vim ~/Documents/Configuration/.bash_aliases && source ~/Documents/Configuration/.bash_aliases"
-alias vimconfig="cd ~/Documents/Configuration/.vim"
-alias tmuxconfig="vim ~/Documents/Configuration/.tmux.conf"
 alias editgitstatus="vim ~/Documents/scripts/gitstatus && source ~/Documents/scripts/gitstatus"
 
 alias compphys="cd ~/Documents/FYS3150/Project5/code"

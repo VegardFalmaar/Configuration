@@ -1,12 +1,12 @@
 " ===== [ Plugins ] ================
 call plug#begin('~/.vim/plugged')
-" Plug 'git@github.com:Valloric/YouCompleteMe.git'
-Plug 'https://github.com/christoomey/vim-tmux-navigator'
 Plug 'https://tpope.io/vim/surround.git'
-Plug 'https://github.com/nanotech/jellybeans.vim'
 Plug 'https://github.com/tpope/vim-repeat'
-Plug 'https://github.com/vim-scripts/ReplaceWithRegister'
+Plug 'https://github.com/christoomey/vim-tmux-navigator'
 Plug 'https://github.com/christoomey/vim-system-copy'
+Plug 'https://github.com/vim-scripts/ReplaceWithRegister'
+Plug 'https://github.com/nanotech/jellybeans.vim'
+" Plug 'git@github.com:Valloric/YouCompleteMe.git'
 call plug#end()
 
 " Youcompleteme fixes
@@ -28,4 +28,4 @@ colorscheme jellybeans
 autocmd Filetype    python
  \ nmap <leader>ca gg2jV/\nif __name__ == '__main__':<cr>cp<cr>
 autocmd Filetype    cpp
- \ nmap <leader>ca gg2jV/\n\nint main(<cr>cp<cr>
+ \ nmap <leader>ca gg2jV/\n\nint main <cr>cp<cr>
