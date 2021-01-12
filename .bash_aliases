@@ -3,7 +3,7 @@ alias snarveier="vim ~/Documents/Configuration/.bash_aliases && source ~/Documen
 alias editgitstatus="vim ~/Documents/scripts/gitstatus && source ~/Documents/scripts/gitstatus"
 
 alias compphys="cd ~/Documents/FYS3150/Project5/code"
-alias highperf="cd ~/Documents/IN3110-vegardfa/assignment6"
+alias highperf="cd ~/Documents/IN3200"
 
 alias code="cd ~/Documents/interesting_code"
 alias scripts="cd ~/Documents/scripts"
