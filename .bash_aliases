@@ -21,3 +21,4 @@ alias matlab='/usr/local/bin/matlab -desktop' #'LD_PRELOAD=/usr/loib/x86_64-linu
 alias ovito="~/Downloads/ovito-basic-3.2.1-x86_64/bin/ovito"
 alias jn="jupyter notebook ."
 alias xclip="xclip -selection c"
+alias l="ls -l"
