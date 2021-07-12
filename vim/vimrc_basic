@@ -34,7 +34,7 @@ set autoindent      " indentation of the next line should be the same as this
 set tabstop=4       " tab indentation levels every four columns
 set softtabstop=4
 set shiftwidth=4
-autocmd Filetype    html,cpp
+autocmd Filetype    html,htmldjango,cpp
   \ setlocal tabstop=2 |
   \ setlocal softtabstop=2 |
   \ setlocal shiftwidth=2
