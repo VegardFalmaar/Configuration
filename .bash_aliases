@@ -11,6 +11,7 @@ alias notes="cd ~/Documents/notes/_code"
 alias sudoku="cd ~/Documents/sudoku_solver"
 alias scalc="cd ~/Documents/symcalc"
 alias ntgprog="cd ~/Dropbox/Skole/NTG/Vikar/Programmering"
+alias ntg1t="cd ~/Dropbox/Skole/NTG/Matte 1T 2021-22"
 alias webdev="cd ~/Documents/personal_website"
 alias bashfuncs="cd ~/Dropbox/Vegard\ og\ Kamilla/.bash_functions"
 
