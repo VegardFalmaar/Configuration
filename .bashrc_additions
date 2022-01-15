@@ -24,4 +24,3 @@ fi
 #fi
 
 export PATH=/home/vegard/Documents/scripts:$PATH
-# cd /home/vegard/Documents

@@ -34,7 +34,7 @@ set autoindent      " indentation of the next line should be the same as this
 set tabstop=4       " tab indentation levels every four columns
 set softtabstop=4
 set shiftwidth=4
-autocmd Filetype    html,htmldjango,cpp
+autocmd Filetype    html,htmldjango,cpp,c,cuda
   \ setlocal tabstop=2 |
   \ setlocal softtabstop=2 |
   \ setlocal shiftwidth=2
@@ -143,7 +143,7 @@ autocmd Filetype    python,sh,conf
     \   let b:CommentIdentifier = "#" |
     \   nnoremap <buffer> <leader>cf :%s/\v# ([A-Z])\|#([a-zA-Z0-9])/# \L\1\2\e/gc<CR>
 " C++
-autocmd Filetype    cpp
+autocmd Filetype    cpp,c,cuda
     \   let b:CommentIdentifier = "//" |
     \   nnoremap <buffer> <leader>cf :%s/\v\/\/ ([A-Z])\|\/\/([a-zA-Z0-9])/\/\/ \L\1\2\e/gc<CR>
 " vim
