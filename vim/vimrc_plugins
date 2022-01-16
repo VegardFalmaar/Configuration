@@ -27,5 +27,5 @@ colorscheme jellybeans
 " ===== [ Copy to system clipboard (requires xsel) ] ================
 autocmd Filetype    python
  \ nmap <leader>ca gg2jV/\nif __name__ == '__main__':<cr>cp<cr>
-autocmd Filetype    cpp
+autocmd Filetype    cpp,c,cuda
  \ nmap <leader>ca gg2jV/\n\nint main <cr>cp<cr>
