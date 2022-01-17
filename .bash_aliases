@@ -4,7 +4,7 @@ alias editgitstatus="vim ~/Documents/scripts/gitstatus && source ~/Documents/scr
 
 alias compphys="cd ~/Documents/FYS3150/Project5/code"
 alias qft="cd ~/Dropbox/Skole/Studier/UiO/7.semester/FYS4170"
-alias ml="cd ~/Documents/IN5400/2021/hw2"
+alias ml="cd ~/Documents/IN5400/2021/hw3"
 
 alias code="cd ~/Documents/interesting_code"
 alias scripts="cd ~/Documents/scripts"
