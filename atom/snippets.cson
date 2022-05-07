@@ -1,3 +1,6 @@
+# symlink this file with the command
+# ln -s ~/Documents/Configuration/atom/snippets.cson ~/.atom/snippets.cson
+
 # Your snippets
 #
 # Atom snippets allow you to enter a simple prefix in the editor and hit tab to

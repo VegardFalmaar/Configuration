@@ -1,3 +1,6 @@
+# add sourcing of this file to ~/.bashrc
+# comment out conflicting color stuff from said file (lines 8-13 in this file)
+
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /'
 }
@@ -15,8 +18,8 @@ if [ -d /home/vegard/Dropbox/Vegard\ og\ Kamilla/.bash_functions ]; then
     done
 fi
 
-if [ -f ~/Documents/Configuration/.bash_aliases ]; then
-    . ~/Documents/Configuration/.bash_aliases
+if [ -f ~/Documents/Configuration/bash/bash_aliases ]; then
+    . ~/Documents/Configuration/bash/bash_aliases
 fi
 
 #if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then

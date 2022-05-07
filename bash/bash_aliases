@@ -1,6 +1,5 @@
 alias config="cd ~/Documents/Configuration"
-alias snarveier="vim ~/Documents/Configuration/.bash_aliases && source ~/Documents/Configuration/.bash_aliases"
-alias editgitstatus="vim ~/Documents/scripts/gitstatus && source ~/Documents/scripts/gitstatus"
+alias snarveier="vim ~/Documents/Configuration/bash/bash_aliases && source ~/Documents/Configuration/bash/bash_aliases"
 
 alias compphys="cd ~/Documents/FYS3150/Project5/code"
 alias qft="cd ~/Dropbox/Skole/Studier/UiO/7.semester/FYS4170"
