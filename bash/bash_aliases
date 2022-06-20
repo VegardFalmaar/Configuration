@@ -14,6 +14,7 @@ alias ntgprog="cd ~/Dropbox/Skole/NTG/Vikar/Programmering"
 alias ntg1t="cd ~/Dropbox/Skole/NTG/Matte\ 1T\ 2021-22"
 alias webdev="cd ~/Documents/personal_website"
 alias bashfuncs="cd ~/Dropbox/Vegard\ og\ Kamilla/.bash_functions"
+alias firma="cd ~/Dropbox/Falmår\ Undervisning"
 
 alias matlab='/usr/local/bin/matlab -desktop' #'LD_PRELOAD=/usr/loib/x86_64-linux-gnu/libstdc++.so.6.0.22 /usr/local/bin/matlab -desktop'
 alias ovito="~/Downloads/ovito-basic-3.2.1-x86_64/bin/ovito"
