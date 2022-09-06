@@ -82,6 +82,12 @@
   'ddtotsq':
     'prefix': 'ddtotsq'
     'body': '\\\\ddtotsq{$1}{$2}$0'
+  'bra':
+    'prefix': 'bra'
+    'body': '\\\\bra{$1}'
+  'ket':
+    'prefix': 'ket'
+    'body': '\\\\ket{$1}'
 
 # numberthis
   '\\numberthis':
