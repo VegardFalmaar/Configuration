@@ -4,5 +4,7 @@ texlive-lang-european
 texlive-latex-extra
 texlive-science
 texlive-publishers
+texlive-bibtex-extra
+biber
 latexmk
 cm-super	# for latex in matplotlib
