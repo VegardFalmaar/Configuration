@@ -13,6 +13,8 @@ git clone git@github.com:VegardFalmaar/Configuration.git
 git clone git@github.com:VegardFalmaar/Delekatalog.git
 git clone git@github.com:VegardFalmaar/interesting_code.git
 git clone git@github.com:VegardFalmaar/scripts.git
+git clone git@github.com:VegardFalmaar/ExTemp.git
+git clone git@github.com:VegardFalmaar/SIC-POVM.git
 
 echo ". ~/Documents/Configuration/bash/bashrc_additions" >> ~/.bashrc
 ln -s ~/Documents/Configuration/tmux/tmux_laptop.conf ~/.tmux.conf
