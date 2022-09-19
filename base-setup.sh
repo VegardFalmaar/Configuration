@@ -39,8 +39,9 @@ snap install slack
 cd /tmp # working directory of your choice
 wget https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
 zcat install-tl-unx.tar.gz | tar xf -
-cd install-tl-*
-perl ./install-tl --no-interaction
+read -p 'Enter numbers in name of unpacked folder: ' folder_number
+cd install-tl-$folder_number
+sudo perl ./install-tl --no-interaction
 echo "export PATH=/usr/local/texlive/2022/bin/x86_64-linux:$PATH" >> ~/.bashrc
 echo "TeXLive installed. Please verify installation path in ~/.bashrc" >> $msg_fname
 
