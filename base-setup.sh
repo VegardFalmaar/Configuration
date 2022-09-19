@@ -7,14 +7,14 @@ git config --global user.name "Vegard Falmår"
 git config --global user.email "vegard.falmaar@me.com"
 
 ### clone repos
-git clone git@github.com:VegardFalmaar/Books.git
-git clone git@github.com:VegardFalmaar/Codewars.git
-git clone git@github.com:VegardFalmaar/Configuration.git
-git clone git@github.com:VegardFalmaar/Delekatalog.git
-git clone git@github.com:VegardFalmaar/interesting_code.git
-git clone git@github.com:VegardFalmaar/scripts.git
-git clone git@github.com:VegardFalmaar/ExTemp.git
-git clone git@github.com:VegardFalmaar/SIC-POVM.git
+git clone git@github.com:VegardFalmaar/Books.git ~/Documents/Books
+git clone git@github.com:VegardFalmaar/Codewars.git ~/Documents/Codewars
+git clone git@github.com:VegardFalmaar/Configuration.git ~/Documents/Configuration
+git clone git@github.com:VegardFalmaar/Delekatalog.git ~/Documents/Delekatalog
+git clone git@github.com:VegardFalmaar/interesting_code.git ~/Documents/interesting_code
+git clone git@github.com:VegardFalmaar/scripts.git ~/Documents/scripts
+git clone git@github.com:VegardFalmaar/ExTemp.git ~/Documents/ExTemp
+git clone git@github.com:VegardFalmaar/SIC-POVM.git ~/Documents/SIC-POVM
 
 echo ". ~/Documents/Configuration/bash/bashrc_additions" >> ~/.bashrc
 ln -s ~/Documents/Configuration/tmux/tmux_laptop.conf ~/.tmux.conf
