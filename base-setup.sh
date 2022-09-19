@@ -42,7 +42,9 @@ zcat install-tl-unx.tar.gz | tar xf -
 read -p 'Enter numbers in name of unpacked folder: ' folder_number
 cd install-tl-$folder_number
 sudo perl ./install-tl --no-interaction
-echo "export PATH=/usr/local/texlive/2022/bin/x86_64-linux:$PATH" >> ~/.bashrc
+echo "export PATH=/usr/local/texlive/2022/bin/x86_64-linux:\$PATH" >> ~/.bashrc
+echo "export MANPATH=/usr/local/texlive/2022/texmf-dist/doc/man:\$MANPATH" >> ~/.bashrc
+echo "export INFOPATH=/usr/local/texlive/2022/texmf-dist/doc/man:\$INFOPATH" >> ~/.bashrc
 echo "TeXLive installed. Please verify installation path in ~/.bashrc" >> $msg_fname
 
 echo Done. Manually install Anaconda, Atom, Zoom, Teams, Discord >> $msg_fname
