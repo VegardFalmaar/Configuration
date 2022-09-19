@@ -1,9 +1,0 @@
-# each one can be installed from cml with
-# apm install <package-name>
-
-language-latex
-latex               by thomasjo, for compiling
-latexer             by Focus, for autocompletion
-minimap
-atom-beautify
-file-icons
