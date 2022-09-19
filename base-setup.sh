@@ -20,11 +20,11 @@ echo ". ~/Documents/Configuration/bash/bashrc_additions" >> ~/.bashrc
 ln -s ~/Documents/Configuration/tmux/tmux_laptop.conf ~/.tmux.conf
 mkdir ~/.vim/swap/
 ln -s ~/Documents/Configuration/vim/vimrc ~/.vimrc
-echo "Dotfiles are set up. Please remove color prompt from ~/.bashrc" >> msg_fname
+echo "Dotfiles are set up. Please remove color prompt from ~/.bashrc" >> $msg_fname
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-echo "VimPlug is set up. Remember to run PlugInstall" >> msg_fname
+echo "VimPlug is set up. Remember to run PlugInstall" >> $msg_fname
 
 ### install Xournalpp
 sudo add-apt-repository ppa:andreasbutti/xournalpp-master
@@ -42,7 +42,7 @@ zcat install-tl-unx.tar.gz | tar xf -
 cd install-tl-*
 perl ./install-tl --no-interaction
 echo "export PATH=/usr/local/texlive/2022/bin/x86_64-linux:$PATH" >> ~/.bashrc
-echo "TeXLive installed. Please verify installation path in ~/.bashrc" >> msg_fname
+echo "TeXLive installed. Please verify installation path in ~/.bashrc" >> $msg_fname
 
-echo Done. Manually install Anaconda, Atom, Zoom, Teams, Discord >> msg_fname
-echo Remember to symlink Atom snippets >> msg_fname
+echo Done. Manually install Anaconda, Atom, Zoom, Teams, Discord >> $msg_fname
+echo Remember to symlink Atom snippets >> $msg_fname
