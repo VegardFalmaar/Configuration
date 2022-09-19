@@ -18,7 +18,7 @@ git clone git@github.com:VegardFalmaar/SIC-POVM.git ~/Documents/SIC-POVM
 
 echo ". ~/Documents/Configuration/bash/bashrc_additions" >> ~/.bashrc
 ln -s ~/Documents/Configuration/tmux/tmux_laptop.conf ~/.tmux.conf
-mkdir ~/.vim/swap/
+mkdir -p ~/.vim/swap/
 ln -s ~/Documents/Configuration/vim/vimrc ~/.vimrc
 echo "Dotfiles are set up. Please remove color prompt from ~/.bashrc" >> $msg_fname
 
