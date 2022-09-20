@@ -12,8 +12,8 @@ else
 fi
 unset color_prompt force_color_prompt
 
-if [ -d /home/vegard/Dropbox/Vegard\ og\ Kamilla/.bash_functions ]; then
-    for file in /home/vegard/Dropbox/Vegard\ og\ Kamilla/.bash_functions/*; do
+if [ -d /home/vegard/Documents/Configuration/bash/bash_functions ]; then
+    for file in /home/vegard/Documents/Configuration/bash/bash_functions/*; do
         . "$file"
     done
 fi
