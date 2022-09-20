@@ -56,6 +56,9 @@ nnoremap Y y$
 nnoremap { {zz
 nnoremap } }zz
 
+" paste over selected word should not add selected word to copy register
+xnoremap <leader>p "_dP
+
 
 
 " ===== [ Search and replace ] ================
