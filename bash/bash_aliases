@@ -15,6 +15,7 @@ alias ntg="cd ~/Dropbox/Skole/NTG/Matte\ 1T/Matte\ 1T\ 22-23"
 alias webdev="cd ~/Documents/personal_website"
 alias bashfuncs="cd ~/Dropbox/Vegard\ og\ Kamilla/.bash_functions"
 alias faktura="cd ~/Dropbox/Falmår\ Undervisning/Faktura"
+alias ft="cd ~/Documents/FalmaarTools"
 
 alias jn="jupyter notebook ."
 alias xclip="xclip -selection c"
