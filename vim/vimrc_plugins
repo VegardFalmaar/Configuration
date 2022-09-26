@@ -1,23 +1,13 @@
 " ===== [ Plugins ] ================
 call plug#begin('~/.vim/plugged')
-Plug 'https://tpope.io/vim/surround.git'
-Plug 'https://github.com/tpope/vim-repeat'
-Plug 'https://github.com/christoomey/vim-tmux-navigator'
-Plug 'https://github.com/christoomey/vim-system-copy'
-Plug 'https://github.com/vim-scripts/ReplaceWithRegister'
-Plug 'https://github.com/nanotech/jellybeans.vim'
-" Plug 'git@github.com:Valloric/YouCompleteMe.git'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'christoomey/vim-system-copy'
+Plug 'vim-scripts/ReplaceWithRegister'
+Plug 'nanotech/jellybeans.vim'
+Plug 'dense-analysis/ale'   " should be used with mypy installed
 call plug#end()
-
-" Youcompleteme fixes
-let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
-let g:ycm_autoclose_preview_window_after_completion=1
-nnoremap <silent> <leader>gd :YcmCompleter GoTo<CR>
-nnoremap <silent> <leader>gf :YcmCompleter FixIt<CR>
-let g:ycm_filetype_whitelist = {
-            \ "c":1,
-            \ "cpp":1,
-            \ }
 
 " jellybeans configuration
 colorscheme jellybeans

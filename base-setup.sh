@@ -20,6 +20,7 @@ echo ". ~/Documents/Configuration/bash/bashrc_additions" >> ~/.bashrc
 ln -s ~/Documents/Configuration/tmux/tmux_laptop.conf ~/.tmux.conf
 mkdir -p ~/.vim/swap/
 ln -s ~/Documents/Configuration/vim/vimrc ~/.vimrc
+ln -s ~/Documents/Configuration/pylintrc ~/.pylintrc
 echo "Dotfiles are set up. Please remove color prompt from ~/.bashrc" >> $msg_fname
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
