@@ -3,6 +3,10 @@ disable=
     C0114,  # missing module docstring
     C0115,  # missing class docstring
     C0116,  # missing function docstring
+    multiple-imports,
+    redefined-outer-name,
+
+generated-members=torch.*
 
 [BASIC]
-good-names-rgxs=[a-z]
+good-names-rgxs=[a-zA-Z]
