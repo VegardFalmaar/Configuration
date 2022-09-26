@@ -4,7 +4,6 @@ disable=
     C0115,  # missing class docstring
     C0116,  # missing function docstring
     multiple-imports,
-    redefined-outer-name,
 
 generated-members=torch.*
 
