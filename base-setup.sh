@@ -26,11 +26,6 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 echo "VimPlug is set up. Remember to run PlugInstall" >> $msg_fname
 
-### install Xournalpp
-sudo add-apt-repository ppa:andreasbutti/xournalpp-master
-sudo apt update
-sudo apt install xournalpp
-
 snap install spotify
 sudo snap install vlc
 snap install slack
