@@ -11,6 +11,7 @@ git clone git@github.com:VegardFalmaar/Books.git ~/Documents/Books
 git clone git@github.com:VegardFalmaar/Codewars.git ~/Documents/Codewars
 git clone git@github.com:VegardFalmaar/Configuration.git ~/Documents/Configuration
 git clone git@github.com:VegardFalmaar/Delekatalog.git ~/Documents/Delekatalog
+git clone git@github.com:VegardFalmaar/FalmaarTools.git ~/Documents/FalmaarTools
 git clone git@github.com:VegardFalmaar/interesting_code.git ~/Documents/interesting_code
 git clone git@github.com:VegardFalmaar/scripts.git ~/Documents/scripts
 git clone git@github.com:VegardFalmaar/ExTemp.git ~/Documents/ExTemp
