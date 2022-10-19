@@ -2,21 +2,18 @@ alias config="cd ~/Documents/Configuration"
 alias snarveier="vim ~/Documents/Configuration/bash/bash_aliases && source ~/Documents/Configuration/bash/bash_aliases"
 
 alias povm="cd ~/Documents/SIC-POVM"
-alias compphys="cd ~/Documents/FYS3150/Project5/code"
 alias qft="cd ~/Dropbox/Skole/Studier/UiO/7.semester/FYS4170"
-alias ml="cd ~/Documents/IN5400/ma2"
 
 alias code="cd ~/Documents/interesting_code"
 alias scripts="cd ~/Documents/scripts"
-alias notes="cd ~/Documents/notes/_code"
-alias sudoku="cd ~/Documents/sudoku_solver"
-alias scalc="cd ~/Documents/symcalc"
-alias ntg="cd ~/Dropbox/Skole/NTG/Matte\ 1T/Matte\ 1T\ 22-23"
-alias webdev="cd ~/Documents/personal_website"
-alias bashfuncs="cd ~/Dropbox/Vegard\ og\ Kamilla/.bash_functions"
-alias faktura="cd ~/Dropbox/Falmår\ Undervisning/Faktura"
 alias ft="cd ~/Documents/FalmaarTools"
 
+alias faktura="cd ~/Dropbox/Falmår\ Undervisning/Faktura"
+
 alias jn="jupyter notebook ."
+alias ntg="cd ~/Dropbox/Skole/NTG/Matte\ 1T/Matte\ 1T\ 22-23"
+alias 1tsync="rsync -av --delete /home/vegard/Dropbox/Skole/NTG/Matte\ 1T/Matte\ 1T\ 22-23/Undervisningsmateriell\ 1T\ 22-23/ /home/vegard/Teams/Undervisningsmateriell_1T_22-23 && onedrive --confdir=\"~/.config/SharePoint_Undervisningsmateriell_1T_22-23\" --synchronize"
+alias 2psync="onedrive --confdir=\"~/.config/SharePoint_Undervisningsmateriell_2P_22-23\" --synchronize"
+
 alias xclip="xclip -selection c"
 alias l="ls -l"
