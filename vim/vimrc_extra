@@ -1,7 +1,7 @@
 " ===== [ Snippets ] ================
 function! PythonDocstringSnippet(NumberOfArgs)
     " insert snippet
-    execute 'read $HOME/Documents/Configuration/vim/skeleton/docstring.py'
+    execute 'read $HOME/Git/Configuration/vim/skeleton/docstring.py'
     " fix indentation
     normal! =7j7j<l
     " paste arguments in args list
@@ -20,7 +20,7 @@ endfunction
 
 function! CppDocstringSnippet(NumArgs)
     " insert snippet
-    execute 'read $HOME/Documents/Configuration/vim/skeleton/docstring.cpp'
+    execute 'read $HOME/Git/Configuration/vim/skeleton/docstring.cpp'
     " fix indentation
     normal! V7j>7j<l
     " paste arguments in args list
@@ -51,7 +51,7 @@ endfunction
 autocmd Filetype    python
  \ nnoremap <buffer> ,d :call PythonDocstringSnippet()<LEFT>|
  \ nnoremap <buffer> ,f :call PythonInsertForLoop()<LEFT>'|
- \ nnoremap <buffer> ,i :-1read $HOME/Documents/Configuration/vim/skeleton/import.py<CR>=jj|
+ \ nnoremap <buffer> ,i :-1read $HOME/Git/Configuration/vim/skeleton/import.py<CR>=jj|
  \ nnoremap <buffer> ,c oinput('Continue?')
 
 " C++

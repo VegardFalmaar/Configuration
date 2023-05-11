@@ -12,14 +12,14 @@ else
 fi
 unset color_prompt force_color_prompt
 
-if [ -d /home/vegard/Documents/Configuration/bash/bash_functions ]; then
-    for file in /home/vegard/Documents/Configuration/bash/bash_functions/*; do
+if [ -d /home/vegard/Git/Configuration/bash/bash_functions ]; then
+    for file in /home/vegard/Git/Configuration/bash/bash_functions/*; do
         . "$file"
     done
 fi
 
-if [ -f ~/Documents/Configuration/bash/bash_aliases ]; then
-    . ~/Documents/Configuration/bash/bash_aliases
+if [ -f ~/Git/Configuration/bash/bash_aliases ]; then
+    . ~/Git/Configuration/bash/bash_aliases
 fi
 
 #if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then

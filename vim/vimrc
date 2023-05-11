@@ -1,9 +1,6 @@
-" symlink this file with the command
-" ln -s ~/Documents/Configuration/vim/vimrc ~/.vimrc
-
-" remember to also create the directory
+" remember to create the directory
 " ~/.vim/swap/
 
-source ~/Documents/Configuration/vim/vimrc_plugins
-source ~/Documents/Configuration/vim/vimrc_basic
-source ~/Documents/Configuration/vim/vimrc_extra
+source ~/Git/Configuration/vim/vimrc_plugins
+source ~/Git/Configuration/vim/vimrc_basic
+source ~/Git/Configuration/vim/vimrc_extra

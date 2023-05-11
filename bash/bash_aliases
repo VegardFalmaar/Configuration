@@ -1,5 +1,5 @@
-alias config="cd ~/Documents/Configuration"
-alias snarveier="vim ~/Documents/Configuration/bash/bash_aliases && source ~/Documents/Configuration/bash/bash_aliases"
+alias config="cd ~/Git/Configuration"
+alias snarveier="vim ~/Git/Configuration/bash/bash_aliases && source ~/Git/Configuration/bash/bash_aliases"
 
 alias povm="cd ~/Documents/SIC-POVM"
 
