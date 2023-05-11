@@ -2,11 +2,9 @@ alias config="cd ~/Documents/Configuration"
 alias snarveier="vim ~/Documents/Configuration/bash/bash_aliases && source ~/Documents/Configuration/bash/bash_aliases"
 
 alias povm="cd ~/Documents/SIC-POVM"
-alias qft="cd ~/Dropbox/Skole/Studier/UiO/7.semester/FYS4170"
 
-alias code="cd ~/Documents/interesting_code"
-alias scripts="cd ~/Documents/scripts"
-alias ft="cd ~/Documents/FalmaarTools"
+alias code="cd ~/Git/interesting_code"
+alias scripts="cd ~/Git/scripts"
 
 alias faktura="cd ~/Dropbox/Falmår\ Undervisning/Faktura"
 

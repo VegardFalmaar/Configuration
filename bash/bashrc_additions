@@ -26,6 +26,6 @@ fi
 #    tmux attach -t default || tmux new -s default
 #fi
 
-export PATH=/home/vegard/Documents/scripts:$PATH
-export PYTHONPATH="${PYTHONPATH}:/home/vegard/Documents/interesting_code/MyMods"
+export PATH=/home/vegard/Git/scripts:$PATH
+export PYTHONPATH="${PYTHONPATH}:/home/vegard/Git/interesting_code/MyMods"
 export EDITOR=vim
