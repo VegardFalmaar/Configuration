@@ -19,6 +19,7 @@ git clone git@github.com:VegardFalmaar/SIC-POVM.git ~/Documents/SIC-POVM
 
 echo ". ~/Documents/Configuration/bash/bashrc_additions" >> ~/.bashrc
 ln -s ~/Documents/Configuration/tmux/tmux_laptop.conf ~/.tmux.conf
+# ln -s ~/Documents/Configuration/tmux/tmux_desktop.conf ~/.tmux.conf
 mkdir -p ~/.vim/swap/
 ln -s ~/Documents/Configuration/vim/vimrc ~/.vimrc
 ln -s ~/Documents/Configuration/pylintrc ~/.pylintrc
