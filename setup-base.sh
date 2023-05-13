@@ -7,22 +7,22 @@ git config --global user.name "Vegard Falmår"
 git config --global user.email "vegard.falmaar@me.com"
 
 ### clone repos
-git clone git@github.com:VegardFalmaar/Books.git ~/Documents/Books
-git clone git@github.com:VegardFalmaar/Codewars.git ~/Documents/Codewars
-git clone git@github.com:VegardFalmaar/Configuration.git ~/Documents/Configuration
+git clone git@github.com:VegardFalmaar/Books.git ~/Git/Books
+git clone git@github.com:VegardFalmaar/Codewars.git ~/Git/Codewars
+git clone git@github.com:VegardFalmaar/Configuration.git ~/Git/Configuration
 git clone git@github.com:VegardFalmaar/Delekatalog.git ~/Documents/Delekatalog
-git clone git@github.com:VegardFalmaar/FalmaarTools.git ~/Documents/FalmaarTools
-git clone git@github.com:VegardFalmaar/interesting_code.git ~/Documents/interesting_code
-git clone git@github.com:VegardFalmaar/scripts.git ~/Documents/scripts
-git clone git@github.com:VegardFalmaar/ExTemp.git ~/Documents/ExTemp
+git clone git@github.com:VegardFalmaar/FalmaarTools.git ~/Git/FalmaarTools
+git clone git@github.com:VegardFalmaar/interesting_code.git ~/Git/interesting_code
+git clone git@github.com:VegardFalmaar/scripts.git ~/Git/scripts
+git clone git@github.com:VegardFalmaar/ExTemp.git ~/Git/ExTemp
 git clone git@github.com:VegardFalmaar/SIC-POVM.git ~/Documents/SIC-POVM
 
-echo ". ~/Documents/Configuration/bash/bashrc_additions" >> ~/.bashrc
-ln -s ~/Documents/Configuration/tmux/tmux_laptop.conf ~/.tmux.conf
-# ln -s ~/Documents/Configuration/tmux/tmux_desktop.conf ~/.tmux.conf
+echo ". ~/Git/Configuration/bash/bashrc_additions" >> ~/.bashrc
+ln -s ~/Git/Configuration/tmux/tmux_laptop.conf ~/.tmux.conf
+# ln -s ~/Git/Configuration/tmux/tmux_desktop.conf ~/.tmux.conf
 mkdir -p ~/.vim/swap/
-ln -s ~/Documents/Configuration/vim/vimrc ~/.vimrc
-ln -s ~/Documents/Configuration/pylintrc ~/.pylintrc
+ln -s ~/Git/Configuration/vim/vimrc ~/.vimrc
+ln -s ~/Git/Configuration/pylintrc ~/.pylintrc
 echo "Dotfiles are set up. Please remove color prompt from ~/.bashrc" >> $msg_fname
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
