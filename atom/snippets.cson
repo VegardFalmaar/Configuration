@@ -1,5 +1,5 @@
 # symlink this file with the command
-# ln -s ~/Documents/Configuration/atom/snippets.cson ~/.atom/snippets.cson
+# ln -s ~/Git/Configuration/atom/snippets.cson ~/.atom/snippets.cson
 
 # Your snippets
 #
