@@ -4,7 +4,7 @@ disable=
     C0115,  # missing class docstring
     C0116,  # missing function docstring
 
-generated-members=torch.*
+generated-members=torch.*,wx.*
 
 [BASIC]
 good-names-rgxs=[a-zA-Z]
