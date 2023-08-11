@@ -30,5 +30,5 @@ set_up_teams_folder () {
     echo if everything is all right
 }
 
-# set_up_teams_folder "BÆ Matematikk 1T 1A 2023-24 Vegard Falmår" "Undervisningsmateriell_1T_23-24"
-set_up_teams_folder "BÆ Matematikk S1 Gr 1 2023-24 Vegard Falmår" "Undervisningsmateriell_S1_23-24"
+set_up_teams_folder "BÆ Matematikk 1T 1A 2023-24 Vegard Falmår" "Undervisningsmateriell_1T_23-24"
+# set_up_teams_folder "BÆ Matematikk S1 Gr 1 2023-24 Vegard Falmår" "Undervisningsmateriell_S1_23-24"
