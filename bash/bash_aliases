@@ -7,7 +7,7 @@ alias code="cd ~/Git/interesting_code"
 alias scripts="cd ~/Git/scripts"
 
 alias faktura="cd ~/Dropbox/Falmår\ Undervisning/Faktura"
-
+alias delekatalog="cd ~/Dropbox/Falmår\ Racing/Delekatalog/code && python Delekatalog.py"
 
 alias jn="jupyter notebook ."
 
