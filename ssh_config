@@ -1,0 +1,6 @@
+# symlink this file with the command
+# ln -s ~/Git/Configuration/ssh_config ~/.ssh/config
+
+Host betzy
+    User vegardfa
+    HostName betzy.sigma2.no
