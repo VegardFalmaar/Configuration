@@ -3,4 +3,8 @@
 
 Host betzy
     User vegardfa
-    HostName betzy.sigma2.no
+    Hostname betzy.sigma2.no
+
+Host uio
+    User vegardfa
+    Hostname login.ifi.uio.no
