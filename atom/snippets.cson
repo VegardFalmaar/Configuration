@@ -95,6 +95,18 @@
   '\\ket':
     'prefix': '\\ket'
     'body': '\\\\ket{$1}$0'
+  'braket':
+    'prefix': 'braket'
+    'body': '\\\\braket{$1}{$2}$0'
+  '\\braket':
+    'prefix': '\\braket'
+    'body': '\\\\braket{$1}{$2}$0'
+  'ketbra':
+    'prefix': 'ketbra'
+    'body': '\\\\ketbra{$1}{$2}$0'
+  '\\ketbra':
+    'prefix': '\\ketbra'
+    'body': '\\\\ketbra{$1}{$2}$0'
 # square root
   'sqrt':
     'prefix': 'sqrt'
