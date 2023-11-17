@@ -12,6 +12,9 @@ call plug#end()
 " jellybeans configuration
 colorscheme jellybeans
 
+" ale c++ compiler flags, I want a lot of warnings
+let g:ale_cpp_cc_options='--std=c++17 -Wall -Wextra -Wshadow -Wconversion -Wpedantic -Werror'
+
 
 
 " ===== [ Copy to system clipboard (requires xsel) ] ================
