@@ -46,4 +46,5 @@ echo "export INFOPATH=/usr/local/texlive/2022/texmf-dist/doc/man:\$INFOPATH" >> 
 echo "TeXLive installed. Please verify installation path in ~/.bashrc" >> $msg_fname
 
 echo Done. Manually install Anaconda, Atom, Zoom, Teams, Discord >> $msg_fname
-echo Remember to symlink Atom snippets >> $msg_fname
+echo Remember to symlink Sublime Text snippets: >> $msg_fname
+echo "ln -s ~/Git/Configuration/sublime-text/snippets ~/.config/sublime-text/Packages/User/snippets"

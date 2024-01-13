@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+\frac{${1:numerator}}{${2:denominator}}$0
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>frac</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>meta.environment.math</scope>
+</snippet>
+
+<snippet>
+	<content><![CDATA[
+\($1\)$0
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>inline</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.tex.latex</scope>
+</snippet>
