@@ -32,3 +32,10 @@ To turn Caps Lock into Left Ctrl Replace the XKBOPTIONS definition in
 ```sh
 XKBOPTIONS="ctrl:nocaps"
 ```
+This affects all users on the system.
+
+This won't affect your current session (you have to restart X11),
+so you can run this command line to change things until then:
+```sh
+setxkbmap -option ctrl:nocaps
+```
