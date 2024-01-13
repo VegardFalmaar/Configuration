@@ -16,8 +16,10 @@ Manual installs
     Found easily by `which pdflatex`.
 - Spotify
 - Zoom
-- Teams
+- Teams (seems to be discontinued by Microsoft, back to the web app ...)
 - Discord
+- GeoGebra
+- OneDrive
 
 
 SSH
