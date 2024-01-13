@@ -25,3 +25,23 @@ SSH
 
 Set up an SSH key and upload it to GitHub. This is required to clone even
 public repositories.
+
+
+Graphics drivers
+----
+
+Check Ubuntu's
+[Nvidia Driver
+Guide](https://ubuntu.com/server/docs/nvidia-drivers-installation)
+for instructions on how to install the correct Nvidia driver.
+
+Check with
+[Nvidia](https://www.nvidia.com/download/index.aspx)
+what version should be installed.
+Check the version currently installed with
+```sh
+cat /proc/driver/nvidia/version
+```
+as per the Ubuntu guide.
+
+Get Steam and play some games!
