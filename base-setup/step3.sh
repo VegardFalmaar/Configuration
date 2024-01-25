@@ -15,6 +15,7 @@ mkdir -p ~/.vim/swap/
 ln -s ~/Git/Configuration/vim/vimrc ~/.vimrc
 ln -s ~/Git/Configuration/pylintrc ~/.pylintrc
 ln -s ~/Git/Configuration/sublime-text/snippets ~/.config/sublime-text/Packages/User/snippets
+ln -s ~/Git/Configuration/sublime-text/keybindings.sublime-keymap ~/.config/sublime-text/Packages/User/Default\ \(Linux\).sublime-keymap
 ln -s ~/Git/Configuration/ssh_config ~/.ssh/config
 echo "Dotfiles are set up. Please remove color prompt from ~/.bashrc" >> $msg_fname
 
