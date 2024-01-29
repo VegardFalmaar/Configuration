@@ -39,7 +39,10 @@
 	{ "keys": ["tab"], "command": "insert", "args": {"characters": "\t"} },
 
 	// default, use tab for auto-complete
-	{ "keys": ["tab"], "command": "auto_complete", "args": {"mini": true, "default": "\t", "commit_single": true},
+	{
+		"keys": ["tab"],
+		"command": "auto_complete",
+		"args": {"mini": true, "default": "\t", "commit_single": true},
 		"context":
 		[
 			{ "key": "auto_complete_visible", "operand": false },
@@ -49,11 +52,9 @@
 		]
 	},
 
-	// remove tab for auto-complete of snippets
-	// default
+	// default, use tab for auto-complete
 	{
 		"keys": ["tab"],
-		// "command": "noop",
 		"command": "auto_complete",
 		"args": {"snippets_only": true, "default": "\t"},
 		"context":
@@ -65,7 +66,7 @@
 		]
 	},
 
-	// use shift+ctrl for inserting snippets
+	// use shift+enter for inserting snippets
 	{
 		"keys": ["shift+enter"],
 		"command": "expand_snippet",
