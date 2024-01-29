@@ -26,6 +26,7 @@ echo "VimPlug is set up. Remember to run PlugInstall" >> $msg_fname
 ln -s ~/Git/Configuration/sublime-text/Snippets ~/.config/sublime-text/Packages/Snippets
 ln -s ~/Git/Configuration/sublime-text/Dictionaries ~/.config/sublime-text/Packages/Dictionaries
 ln -s ~/Git/Configuration/sublime-text/keybindings.sublime-keymap ~/.config/sublime-text/Packages/User/Default\ \(Linux\).sublime-keymap
+ln -s ~/Git/Configuration/sublime-text/Preferences.sublime-settings ~/.config/sublime-text/Packages/User/Preferences.sublime-settings
 
 ### misc
 ln -s ~/Git/Configuration/pylintrc ~/.pylintrc

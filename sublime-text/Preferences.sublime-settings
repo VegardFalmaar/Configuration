@@ -1,0 +1,14 @@
+{
+    "draw_white_space": ["selection", "trailing", "isolated"],
+
+    "ignored_packages":
+    [
+        "Vintage",
+    ],
+    "dictionary": "Packages/Language - English/en_GB.dic",
+    "added_words":
+    [
+        "definisjonsmengde",
+        "Motocrossfører",
+    ],
+}
