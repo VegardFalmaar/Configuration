@@ -25,6 +25,7 @@ Text Mode
 - Insert figure: "sfig"
 - Inline equation: "sin"
 - Block equation: "eq"
+- Align env.: "sal"
 
 
 Math Mode
