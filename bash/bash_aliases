@@ -1,6 +1,8 @@
 alias config="cd ~/Git/Configuration"
 alias snarveier="vim ~/Git/Configuration/bash/bash_aliases && source ~/Git/Configuration/bash/bash_aliases"
 
+alias todo="vim -O ~/Dropbox/Vegard\ og\ Kamilla/TODO/9999-current.md ~/Dropbox/TODO/9999-current.md"
+
 alias povm="cd ~/Documents/SIC-POVM"
 
 alias code="cd ~/Git/interesting_code"
