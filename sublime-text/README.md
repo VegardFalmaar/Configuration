@@ -1,3 +1,19 @@
+Setup
+====
+
+The files
+
+- keybindings.sublime-keymap
+- Preferences.sublime-settings
+
+should be symlinked according to the instructions in each file.
+
+The directories Dictionaries and Snippets should be symlinked with
+
+- `ln -s ~/Git/Configuration/sublime-text/Dictionaries ~/.config/sublime-text/Packages/Dictionaries`
+- `ln -s ~/Git/Configuration/sublime-text/Snippets ~/.config/sublime-text/Packages/Snippets`
+
+
 Key Bindings
 ====
 

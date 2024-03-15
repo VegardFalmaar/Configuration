@@ -1,3 +1,5 @@
+// symlink this file with the command
+// ln -s ~/Git/Configuration/sublime-text/Preferences.sublime-settings ~/.config/sublime-text/Packages/User/Preferences.sublime-settings
 {
     "draw_white_space": ["selection", "trailing", "isolated"],
 
