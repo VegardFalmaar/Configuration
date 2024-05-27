@@ -17,4 +17,6 @@
     ],
     "font_size": 11,
     "index_files": true,
+    "rulers": [80],
+    "always_show_minimap_viewport": true,
 }
