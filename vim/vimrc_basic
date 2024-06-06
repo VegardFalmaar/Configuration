@@ -138,21 +138,25 @@ let g:netrw_sort_options = "i"  " sort alphabetically case insensitively
 
 
 " ===== [ Comments ] ================
+" Define a comment identifier based on the file type. The functions
+" InsertComment and RemoveComment uses these.
+
 " default comment identifier
 let b:CommentIdentifier = "#"
 
 " Python
 autocmd Filetype    python,sh,conf
-    \   let b:CommentIdentifier = "#" |
-    \   nnoremap <buffer> <leader>cf :%s/\v# ([A-Z])\|#([a-zA-Z0-9])/# \L\1\2\e/gc<CR>
+    \   let b:CommentIdentifier = "#"
 " C++
 autocmd Filetype    cpp,c,cuda
-    \   let b:CommentIdentifier = "//" |
-    \   nnoremap <buffer> <leader>cf :%s/\v\/\/ ([A-Z])\|\/\/([a-zA-Z0-9])/\/\/ \L\1\2\e/gc<CR>
+    \   let b:CommentIdentifier = "//"
 " vim
 autocmd Filetype    vim
-    \   let b:CommentIdentifier = '"' |
-    \   nnoremap <buffer> <leader>cf :%s/\v" ([A-Z])\|"([a-zA-Z0-9])/" \L\1\2\e/gc<CR>
+    \   let b:CommentIdentifier = '"'
+" Check/uncheck boxes in MD todo-list
+autocmd Filetype    markdown
+    \   nnoremap <silent> <leader>cc mm03lrx`mh |
+    \   nnoremap <silent> <leader>cu mm03lr<space>`m
 
 function! InsertComment(NumberOfLines)
     let Comment = b:CommentIdentifier . ' '
