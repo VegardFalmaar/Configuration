@@ -1,10 +1,10 @@
 <snippet>
 	<content><![CDATA[
 \begin{figure}[ht]
-    \centering
-    \includegraphics[width=${2:\linewidth}]{${1:/path/to/figure}}
-    \caption{$3}
-    \label{fig:$4}
+  \centering
+  \includegraphics[width=${2:\linewidth}]{${1:/path/to/figure}}
+  \caption{$3}
+  \label{fig:$4}
 \end{figure}$0
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
