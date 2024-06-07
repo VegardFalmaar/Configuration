@@ -137,35 +137,55 @@ let g:netrw_sort_options = "i"  " sort alphabetically case insensitively
 
 
 
+
+
 " ===== [ Comments ] ================
 " Define a comment identifier based on the file type. The functions
 " InsertComment and RemoveComment uses these.
 
-" default comment identifier
-let b:CommentIdentifier = "#"
+function! InterpretCommentKeybinding(NumberOfLines)
+    if (&ft=='markdown')
+        call CheckBox(a:NumberOfLines)
+    elseif (&ft=='python' || &ft=='sh' || &ft=='conf')
+        call InsertComment("#",a:NumberOfLines)
+    elseif (&ft=='c' || &ft=='cpp' || &ft=='cuda')
+        call InsertComment("//",a:NumberOfLines)
+    elseif (&ft=='vim')
+        call InsertComment('"',a:NumberOfLines)
+    endif
+endfunction
 
-" Python
-autocmd Filetype    python,sh,conf
-    \   let b:CommentIdentifier = "#"
-" C++
-autocmd Filetype    cpp,c,cuda
-    \   let b:CommentIdentifier = "//"
-" vim
-autocmd Filetype    vim
-    \   let b:CommentIdentifier = '"'
-" Check/uncheck boxes in MD todo-list
-autocmd Filetype    markdown
-    \   nnoremap <silent> <leader>cc mm03lrx`mh |
-    \   nnoremap <silent> <leader>cu mm03lr<space>`m
+function! InterpretUncommentKeybinding(NumberOfLines)
+    if (&ft=='markdown')
+        call UncheckBox(a:NumberOfLines)
+    else
+        call RemoveComment(a:NumberOfLines)
+    endif
+endfunction
 
-function! InsertComment(NumberOfLines)
-    let Comment = b:CommentIdentifier . ' '
+function! CheckBox(NumberOfLines)
+    normal! mm
+    for i in range(1, a:NumberOfLines)
+        normal! ^3lrxj
+    endfor
+    normal! `m
+endfunction
+
+function! UncheckBox(NumberOfLines)
+    normal! mm
+    for i in range(1, a:NumberOfLines)
+        normal! ^3lr j
+    endfor
+    normal! `m
+endfunction
+
+function! InsertComment(CommentIdentifier,NumberOfLines)
     " set a mark where the cursor is currently located
     normal! mm
     " insert the comment identifier followed by a whitespace on the desired
     " number of lines
     for i in range(1, a:NumberOfLines)
-        execute "normal! I" . Comment . "\<Esc>"
+        execute "normal! I" . a:CommentIdentifier . " \<Esc>"
         normal! j
     endfor
     " return to mark
@@ -180,15 +200,17 @@ function! RemoveComment(NumberOfLines)
     normal! `m
 endfunction
 
-nnoremap <silent> <leader>cc :call InsertComment(1)<CR>
-nnoremap <silent> <leader>cu :call RemoveComment(1)<CR>
+nnoremap <silent> <leader>cc :call InterpretCommentKeybinding(1)<CR>
+nnoremap <silent> <leader>cu :call InterpretUncommentKeybinding(1)<CR>
 for NumLines in range(2, 9)
-    execute 'nnoremap <silent> ' . NumLines . '<leader>cc :call InsertComment(' . NumLines . ')<CR>'
-    execute 'nnoremap <silent> ' . NumLines . '<leader>cu :call RemoveComment(' . NumLines . ')<CR>'
+    execute 'nnoremap <silent> ' . NumLines . '<leader>cc :call InterpretCommentKeybinding(' . NumLines . ')<CR>'
+    execute 'nnoremap <silent> ' . NumLines . '<leader>cu :call InterpretUncommentKeybinding(' . NumLines . ')<CR>'
 endfor
 
 " do not make the new line after a comment also a comment
 set formatoptions-=o | set formatoptions-=r
+
+
 
 
 
