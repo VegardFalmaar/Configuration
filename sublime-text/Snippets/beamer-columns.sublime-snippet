@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+\begin{columns}[T] % align columns
+  \begin{column}{.48\textwidth}
+    ${0:Left column}
+  \end{column}%
+  \hfill%
+  \begin{column}{.48\textwidth}
+    Right column
+  \end{column}%
+\end{columns}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>scol</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.tex.latex</scope>
+</snippet>
